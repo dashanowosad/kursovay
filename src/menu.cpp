@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include "functions.h"
 
 using namespace std;
 
@@ -31,25 +32,8 @@ while(c!='3')
 	system("clear");
     	cout<<"1. Правила"<<endl;
     	cout<<"3. Выход из игры"<<endl;
-	char A[4][4];
-	int i,j;
-
-
-	for (i=1;i<=4;i++)
-	{
-		for(j=0;j<=4;j++)
-		{
-			A[i][j]=32; 
-		}
-	}	
-cout<<"| "<<A[1][1]<<" | "<<A[1][2]<<" | "<<A[1][3]<<" | "<<A[1][4]<<" |"<<endl;
-cout<<"|---------------|"<<endl;
-cout<<"| "<<A[2][1]<<" | "<<A[2][2]<<" | "<<A[2][3]<<" | "<<A[2][4]<<" |"<<endl;
-cout<<"|---------------|"<<endl;
-cout<<"| "<<A[3][1]<<" | "<<A[3][2]<<" | "<<A[3][3]<<" | "<<A[3][4]<<" |"<<endl;
-cout<<"|---------------|"<<endl;
-cout<<"| "<<A[4][1]<<" | "<<A[4][2]<<" | "<<A[4][3]<<" | "<<A[4][4]<<" | "<<endl;
-cout<<"|---------------|"<<endl;
+	int A[4][4];
+	print(A);	
 	break;
     	}
 	
