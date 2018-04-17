@@ -3,15 +3,17 @@
 #include <stdlib.h>
 #include <locale.h>
 #include "functions.h"
+#include <time.h>
 
-void mass(int A[4][4])
+void mass(int A[])
 { 
-int i,j,k=1;
-for (i=1;i<=4;i++)
-	for(j=1;j<=4;j++)
+srand(time(NULL));
+int i;
+for (i=1;i<=15;i++)
 	{
-	A[i][j]=k;
-	k++;
+	A[i]=i;
 	}
-A[4][4]=0;
+A[0]=0;
+for(i=0;i<16;i++)
+std::swap(A[i],A[rand()%16]);
 }
