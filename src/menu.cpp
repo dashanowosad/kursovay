@@ -32,7 +32,7 @@ while(c!='3')
 	system("clear");
     	cout<<"1. Правила"<<endl;
     	cout<<"3. Выход из игры"<<endl;
-	int A[4][4];
+	int A[16];
 	print(A);	
 	break;
     	}
