@@ -7,11 +7,9 @@
 using namespace std;
 void print(int A[])
 {
-int number;
-number=mass(A);
-puts("\n");
-printf("Решаемая комбинация создана с %d попытки",number);
-puts("\n");
+cout<<"a. Правила"<<endl;
+cout<<"b. Завершить и начать новую игру"<<endl;
+cout<<"c. Выход из игры"<<endl;
 cout<<"\t"<<A[1]<<"\t"<<A[2]<<"\t"<<A[3]<<"\t"<<A[4]<<"\t"<<endl;
 cout<<""<<endl;
 cout<<"\t"<<A[5]<<"\t"<<A[6]<<"\t"<<A[7]<<"\t"<<A[8]<<"\t"<<endl;
