@@ -18,7 +18,6 @@ else if ((zero==9)||(zero==10)||(zero==11)||(zero==12)) zero=3;
 else if ((zero==13)||(zero==14)||(zero==15)||(zero==0)) zero=4;
 
 result=zero+h;
-if ((result%3)==0) return 0;
-else if ((result%2)==0) return 1;
-return 0;
+if ((result%2)==0) return 1;
+else return 0;
 }
