@@ -39,6 +39,10 @@ while(c!='c')
 		break;
     		}
 
+		case 'c':
+    		{
+		return 0;
+    		}
 		
 	}
 
