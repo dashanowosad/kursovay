@@ -5,10 +5,12 @@
 #include "functions.h"
 #include <time.h>
 
-int mass(int A[])
+void mass(int A[])
 { 
 srand(time(NULL));
 int i,control, number;
+struct timespec tw={1,000};
+struct timespec tr;
 while(1)
 {
 	number++;
@@ -19,8 +21,13 @@ while(1)
 	A[0]=0;
 	for(i=0;i<16;i++)
 	std::swap(A[i],A[rand()%16]);
+	nanosleep(&tw,&tr);
+	system("clear");
+	print(A);
 	control=prow(A);
 	if (control==1) break;
 }
-return number;
+puts("\n");
+printf("Решаемая комбинация создана с %d попытки",number);
+puts("\n");
 }

@@ -31,11 +31,8 @@ while(c!='c')
 		case 'b':
     		{
 		system("clear");
-    		cout<<"a. Правила"<<endl;
-		cout<<"b. Завершить и начать новую игру"<<endl;
-    		cout<<"c. Выход из игры"<<endl;
 		int A[16];
-		print(A);	
+		mass(A);	
 		break;
     		}
 
