@@ -9,7 +9,7 @@ void mass(int A[])
 { 
 srand(time(NULL));
 int i,control, number;
-struct timespec tw={1,000};
+struct timespec tw={1,0};
 struct timespec tr;
 while(1)
 {
@@ -21,9 +21,9 @@ while(1)
 	A[0]=0;
 	for(i=0;i<16;i++)
 	std::swap(A[i],A[rand()%16]);
-	nanosleep(&tw,&tr);
 	system("clear");
 	print(A);
+	nanosleep(&tw,&tr);
 	control=prow(A);
 	if (control==1) break;
 }
