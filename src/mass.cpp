@@ -5,12 +5,13 @@
 #include "functions.h"
 #include <time.h>
 
-void mass(int A[])
+int mass(int A[])
 { 
 srand(time(NULL));
-int i,k;
+int i,control, number;
 while(1)
 {
+	number++;
 	for (i=1;i<=15;i++)
 		{
 		A[i]=i;
@@ -18,7 +19,8 @@ while(1)
 	A[0]=0;
 	for(i=0;i<16;i++)
 	std::swap(A[i],A[rand()%16]);
-	k=prow(A);
-	if (k==1) break;
+	control=prow(A);
+	if (control==1) break;
 }
+return number;
 }
