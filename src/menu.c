@@ -30,7 +30,9 @@ while(c!='c')
     		{
 		system("clear");
 		int A[16];
-		mass(A);	
+		mass(A);
+		while (1)
+		move(A);	
 		break;
     		}
 
