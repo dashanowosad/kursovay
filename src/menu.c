@@ -29,7 +29,7 @@ while(c!='c')
 		case 'b':
     		{
 		system("clear");
-		int A[16];
+		int A[17];
 		mass(A);
 		while (1)
 		move(A);	

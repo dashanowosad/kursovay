@@ -19,9 +19,9 @@ while(1)
 		A[i]=i;
 		}
 	A[0]=0;
-	for(i=0;i<16;i++)
+	for(i=0;i<=15;i++)
 	{
-		j=rand()%(i+1);		
+		j=1+rand()%(i+1);		
 		t=A[j];
 		A[j]=A[i];
 		A[i]=t;
