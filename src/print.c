@@ -5,9 +5,8 @@
 
 void print(int A[])
 {
-printf("a. Правила\n");
-printf("b. Завершить и начать новую игру\n");
-printf("c. Выход из игры\n");
+printf("0. Завершить игру\n");
+;
 printf("\n");
 printf("%d\t %d\t %d\t %d\t",A[0],A[1],A[2],A[3]);
 printf("\n");
