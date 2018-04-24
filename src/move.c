@@ -5,9 +5,12 @@
 
 void move(int A[])
 {
+
 int n, k,i,m,j;
+while(1)
+{
 scanf("%d", &n);
-for (i=0; i<=15; i++)
+for (i=1; i<=15; i++)
 {if (A[i]==0 ) k=i;
 if (A[i]==n) j=i;}
 
@@ -19,7 +22,9 @@ A[j]=m;
 system("clear");
 print(A);
 }
+else if (n==0) break;
 else printf("Неверный ход");
 
+}
 
 }

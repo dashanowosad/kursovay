@@ -29,10 +29,13 @@ while(c!='c')
 		case 'b':
     		{
 		system("clear");
-		int A[16];
+		int A[17];
 		mass(A);
-		while (1)
-		move(A);	
+		move(A);
+		system("clear");
+		printf("a. Правила\n");
+		printf("b. Начать игру\n");
+		printf("c. Выход из игры\n");	
 		break;
     		}
 
