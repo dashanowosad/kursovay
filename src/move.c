@@ -6,7 +6,7 @@
 void move(int A[])
 {
 
-int n, k,i,m,j;
+int n, k,i,m,j,w;
 while(1)
 {
 scanf("%d", &n);
@@ -24,7 +24,9 @@ print(A);
 }
 else if (n==0) break;
 else printf("Неверный ход");
-
+w=win(A);
+if (w==15) printf("Поздравляем, вы победили"); break;
 }
+
 
 }

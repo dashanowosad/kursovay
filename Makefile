@@ -1,6 +1,6 @@
 CXX=gcc
 CFLAGS= $(CXX) -c -Wall -Werror
-OBJECTS = build/menu.o build/print.o build/mass.o build/prow.o build/move.o
+OBJECTS = build/menu.o build/print.o build/mass.o build/prow.o build/move.o build/win.o
 .PHONY: all clean
 
 all: bin build bin/tag
@@ -22,6 +22,9 @@ build/prow.o: src/prow.c src/functions.h
 
 build/move.o: src/move.c src/functions.h
 	$(CFLAGS) src/move.c -o build/move.o
+
+build/win.o: src/win.c src/functions.h
+	$(CFLAGS) src/win.c -o build/win.o
 
 bin:
 	mkdir bin
