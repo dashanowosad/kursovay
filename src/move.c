@@ -25,7 +25,7 @@ print(A);
 else if (n==0) break;
 else printf("Неверный ход");
 w=win(A);
-if (w==15) printf("Поздравляем, вы победили"); break;
+if (w==15) {printf("Поздравляем, вы победили"); break;}
 }
 
 
