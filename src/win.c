@@ -4,13 +4,14 @@
 #include "functions.h"
 #include <time.h>
 
-
 int win(int A[])
-{ 	int w,i;
-	w=0;
-	//while (i!=15)
-	for (i=1;i<14;i++)
-	if (A[i]<A[i+1]) w++;
-	return w;
-	
+{ 
+    int w, i;
+    w = 0;
+    for (i = 1;i < 14;i++) {
+        if (A[i] < A[i+1]) {
+            w++;
+        }
+    }
+return w;	
 }
