@@ -4,44 +4,45 @@
 #include "functions.h"
 #include <time.h>
 
-
 void mass(int A[])
 { 
-srand(time(NULL));
-int i,control, number,t,j;
-struct timespec tw={1,2};
-struct timespec tr;
-while(1)
-{
-	number++;
-	for (i=1;i<=15;i++)
-		{
-		A[i]=i;
-		}
-	A[0]=0;
-	for(i=0;i<=15;i++)
-	{
-		j=rand()%(i+1);		
-		t=A[j];
-		A[j]=A[i];
-		A[i]=t;
-	}
-	
-	system("clear");
+    srand(time(NULL));
+    int i, control, number, t, j;
+    struct timespec tw = {1,2};
+    struct timespec tr;
 
-	for(i=0;i<=15;i++)
-	{
-		if(A[i]==0){		
-		t=A[15];
-		A[15]=A[i];
-		A[i]=t;}
-	}
-	print(A);
-	nanosleep(&tw,&tr);
-	control=prow(A);
-	if (control==1) break;
-}
-puts("\n");
-printf("Решаемая комбинация создана с %d попытки",number);
-puts("\n");
+    while(1) {
+        number++;
+        for (i = 1;i <= 15;i++) {
+            A[i] = i;
+        }
+
+        A[0] = 0;
+        for(i = 0;i <= 15;i++) {
+            j = rand()%(i+1);		
+            t = A[j];
+            A[j] = A[i];
+            A[i] = t;
+        }
+
+        system("clear");
+        for(i = 0;i <= 15;i++) {
+            if(A[i] == 0) {
+                t = A[15];
+                A[15] = A[i];
+                A[i] = t;
+            }
+        }
+
+        print(A);
+        nanosleep(&tw,&tr);
+        control = prow(A);
+        if (control == 1) {
+            break;
+        }
+    }
+
+    puts("\n");
+    printf("Решаемая комбинация создана с %d попытки",number);
+    puts("\n");
 }
