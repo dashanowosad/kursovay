@@ -12,42 +12,42 @@ printf("a. Правила\n");
 printf("b. Начать игру\n");
 printf("c. Выход из игры\n");
 
-while(c!='c')
-{
-    	c=getchar();
-    	switch(c)
-    	{
- 		case 'a':
-    		{
-		system("clear");
-    		printf("b. Начать игру\n");
-    		printf("c. Выход из игры\n");
-    		printf("Цель игры расставить числа в порядке возрастания. Введите число с клавиатуры, и оно поменяется с пустым квадратом(менять можно только соседние с пустой клеткой квадраты).");
-		break;
-    		}
+while(c!='c') {
+    c=getchar();
+    switch(c) {
 
-		case 'b':
-    		{
-		system("clear");
-		int A[17];
-		mass(A);
-		move(A);
-		system("clear");
-		printf("a. Правила\n");
-		printf("b. Начать игру\n");
-		printf("c. Выход из игры\n");	
-		break;
-    		}
+    case 'a': {
+        system("clear");
+        printf("b. Начать игру\n");
+        printf("c. Выход из игры\n");
+        printf("Цель игры расставить числа в порядке возрастания. Введите число"); 
+        printf(" с клавиатуры, и оно поменяется с пустым квадратом (менять ");
+        printf("можно только соседние с пустой клеткой квадраты.");
+        break;
+    }
 
-		case 'c':
-    		{
-		return 0;
-    		}
-		
-	}
+    case 'b': {
+        system("clear");
+        int A[17];
+        mass(A);
+        move(A);
+        system("clear");
+        printf("a. Правила\n");
+        printf("b. Начать игру\n");
+        printf("c. Выход из игры\n");	
+        break;
+    }
 
+    case 'c': 
+        return 0;
+    
+
+    default: {
+    if(c!=10) printf("Не верный ввод, попробуйте еще раз.\n");
+    printf("\n");
+    break;
+    }
+    }
 }
 return 0;
 }
-
-
