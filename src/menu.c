@@ -49,5 +49,6 @@ while(c!='c') {
     }
     }
 }
+
 return 0;
 }
