@@ -37,7 +37,7 @@ build/win.o: src/win.c src/functions.h
 
 
 bin/tag_test: $(OB)
-	$(CXX) $(OB) -o bin/tag_test
+	$(CFLAGS) $(OB) -o bin/tag_test
 
 build/tag_test.o: test/main.c thirdparty/ctest.h src/functions.h
 	$(CFLAGS) -I thirdparty -I src -c test/main.c -o build/tag_test.o
