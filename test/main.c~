@@ -12,7 +12,7 @@ CTEST(Prow, Correct_Prow)
 	}	
 A[15]=0;
 int result = prow(A);
-int expect = 1;
+int expect = 0;
 ASSERT_EQUAL(expect,result);	
 }
 
