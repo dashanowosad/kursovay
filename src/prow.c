@@ -6,7 +6,7 @@
 
 int prow(int A[])
 {
-    int i, h=0, zero, result;
+    int i, h=0, zero=0, result=0;
 
     for (i = 1;i <= 16;i++) {
         if(A[i] > A[i+1]) {
