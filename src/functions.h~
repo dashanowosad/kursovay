@@ -3,7 +3,7 @@
 
 void print(int A[]);
 int mass(int A[]);
-int move (int A[]);
+void move (int A[]);
 int win(int A[]);
 int prow(int A[]);
 
