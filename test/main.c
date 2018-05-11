@@ -45,6 +45,33 @@ ASSERT_EQUAL(expect,result);
 }
 
 
+CTEST(Move, Correct_Move)
+{int A[17];	
+A[0]=3;
+A[1]=12;
+A[2]=1;
+A[3]=15;
+A[4]=7;
+A[5]=8;
+A[6]=13;
+A[7]=6;
+A[8]=2;
+A[9]=14;
+A[10]=11;
+A[11]=4;
+A[12]=5;
+A[13]=10;
+A[14]=9;
+A[15]=0;
+puts("\n");
+print(A);
+puts("\n");
+printf("Введите 4 или 9");
+int result = move(A);
+int expect = 1;
+ASSERT_EQUAL(expect,result);	
+}
+
 
 
 int main(int argc, const char** argv) 

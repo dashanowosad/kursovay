@@ -3,9 +3,9 @@
 #include <locale.h>
 #include "functions.h"
 
-void move(int A[]) 
+int move(int A[]) 
 {
-    int n, k, i, m, j, w;
+    int n, k, i, m, j, w, flag = 0;
     while(1) {
         scanf("%d", &n);
         for (i = 1; i <= 15; i++) {
@@ -19,17 +19,22 @@ void move(int A[])
             A[j] = m;
             system("clear");
             print(A);
+            flag = 1;
         }
 
         else if (n == 0)
             break;
 
-        else
-            printf("Неверный ход");
+        else {
+            printf("Неверный ход"); 
+            flag = 0;
+        }
         w = win(A);
         if (w == 15) {
             printf("Поздравляем, вы победили");
             break;
         }
     }
+    if (flag == 1) return 1;
+    else return 0;
 }
