@@ -4,10 +4,10 @@
 #include "functions.h"
 #include <time.h>
 
-void mass(int A[])
+int mass(int A[])
 { 
     srand(time(NULL));
-    int i, control, number, t, j;
+    int i, control, number, t, j, k=0;
     struct timespec tw = {1,2};
     struct timespec tr;
 
@@ -45,4 +45,11 @@ void mass(int A[])
     puts("\n");
     printf("Решаемая комбинация создана с %d попытки",number);
     puts("\n");
+
+    for(i = 0; i <=15; i++) {
+    if ((A[i] <= 0) || (A[i] > 15)) 
+        k++;
+    }
+    if (k == 1) return 1;
+    else return 0;
 }
