@@ -7,7 +7,7 @@
 int mass(int A[])
 { 
     srand(time(NULL));
-    int i, control, number, t, j, k=0;
+    int i, control, number=0, t, j, k=0;
     struct timespec tw = {1,2};
     struct timespec tr;
 

@@ -6,10 +6,10 @@
 
 int prow(int A[])
 {
-    int i, h=1, zero=0, result=0;
+    int i, h=0, zero=0, result=0;
 
     for (i = 1;i < 16;i++) {
-        if(A[i] > A[i+1]) {
+        if ((A[i] > A[i+1]) && (A[i+1] != 0)) {
             h++;
         }
     }
