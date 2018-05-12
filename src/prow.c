@@ -35,8 +35,11 @@ int prow(int A[])
 
     result = zero + h;
     if ((result % 2) == 0) {
+printf("%d", result);
         return 1;
     }
-    else
+    else {
+printf("%d", result);
         return 0;
+}
 }
