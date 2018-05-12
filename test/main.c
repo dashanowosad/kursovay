@@ -4,13 +4,7 @@
 #include <ctest.h>
 
 
-CTEST(Mass, Correct_Mass)
-{
-int A[17];
-int result = mass(A);
-int expect=1;
-ASSERT_EQUAL(expect,result);	
-}
+
 
 CTEST(Prow, Correct_Prow)
 { int A[17], i,j=0;
