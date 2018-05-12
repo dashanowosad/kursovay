@@ -141,6 +141,22 @@ int expect = 15;
 ASSERT_EQUAL(expect,result);
 }
 
+CTEST(Win, Incorrect_Win)
+{ int A[17], i,j=0;
+	for (i=1; i<16; i++)
+	{
+	A[j]=i;
+	 j++;
+	}	
+A[15]=0;
+A[13] = 15;
+A[14] = 14;
+int result = win(A);
+int expect = 14;
+
+ASSERT_EQUAL(expect,result);
+}
+
 
 int main(int argc, const char** argv) 
 {
