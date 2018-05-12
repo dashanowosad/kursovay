@@ -39,5 +39,5 @@ int prow(int A[])
     }
     else 
         return 0;
-}
+
 }
