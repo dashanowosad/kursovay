@@ -7,13 +7,17 @@
 int prow(int A[])
 {
     int i, h=0, zero=0, result=0;
-
+	printf("%d",result);
+	puts("\n");	
+	printf("%d",h);
+	puts("\n");
     for (i = 1;i < 16;i++) {
         if ((A[i] > A[i+1]) && (A[i+1] != 0)) {
             h++;
+	printf("%d",h);
         }
     }
-
+puts("\n");
     for(i = 0;i <= 15;i++) {
         if (A[i] == 0) {
             zero = i;
