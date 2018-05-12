@@ -7,13 +7,11 @@
 int prow(int A[])
 {
     int i, h=0, zero=0, result=0;
-
-    for (i = 1;i < 16;i++) {
+    for (i = 0;i < 15;i++) {
         if ((A[i] > A[i+1]) && (A[i+1] != 0)) {
             h++;
         }
     }
-
     for(i = 0;i <= 15;i++) {
         if (A[i] == 0) {
             zero = i;
@@ -39,5 +37,4 @@ int prow(int A[])
     }
     else 
         return 0;
-
 }
