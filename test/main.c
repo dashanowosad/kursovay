@@ -4,8 +4,6 @@
 #include <ctest.h>
 
 
-
-
 CTEST(Prow, Correct_Prow)
 { int A[17], i,j=0;
 	for (i=1; i<16; i++)
@@ -88,6 +86,14 @@ puts("\n");
 printf("Введите любые числа кроме 4 или 9\n");
 int result = move(A,2);
 int expect = 0;
+ASSERT_EQUAL(expect,result);	
+}
+
+CTEST(Mass, Correct_Mass)
+{
+int A[17];
+int result = mass(A);
+int expect=1;
 ASSERT_EQUAL(expect,result);	
 }
 
