@@ -11,7 +11,7 @@ int prow(int A[])
 	puts("\n");	
 	printf("%d",h);
 	puts("\n");
-    for (i = 1;i < 16;i++) {
+    for (i = 0;i < 15;i++) {
         if ((A[i] > A[i+1]) && (A[i+1] != 0)) {
             h++;
 	printf("%d",h);
