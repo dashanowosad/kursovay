@@ -65,7 +65,7 @@ puts("\n");
 print(A);
 puts("\n");
 printf("Введите 4 или 9\n");
-int result = move(A);
+int result = move(A,1);
 int expect = 1;
 ASSERT_EQUAL(expect,result);	
 }
@@ -92,7 +92,7 @@ puts("\n");
 print(A);
 puts("\n");
 printf("Введите любые числа кроме 4 или 9\n");
-int result = move(A);
+int result = move(A,2);
 int expect = 0;
 ASSERT_EQUAL(expect,result);	
 }

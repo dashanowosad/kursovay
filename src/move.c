@@ -3,11 +3,13 @@
 #include <locale.h>
 #include "functions.h"
 
-int move(int A[]) 
+int move(int A[], int test) 
 {
     int n, k, i, m, j, w, flag = 0;
     while(1) {
-        scanf("%d", &n);
+        if (test == 0) scanf("%d", &n);
+        if (test == 1) n=4;
+        if (test == 2) n=5;
         for (i = 1; i <= 15; i++) {
             if (A[i] == 0 ) k = i;
             if (A[i] == n) j = i;
@@ -34,6 +36,7 @@ int move(int A[])
             printf("Поздравляем, вы победили");
             break;
         }
+        if ((test == 1) || (test == 2)) break;
     }
     if (flag == 1) return 1;
     else return 0;

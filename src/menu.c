@@ -28,7 +28,7 @@ int main()
             system("clear");
             int A[17];
             mass(A);
-            move(A);
+            move(A,0);
             system("clear");
             printf("a. Правила\n");
             printf("b. Начать игру\n");
