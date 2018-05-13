@@ -40,7 +40,7 @@ int main()
             return 0;
     
         default: {
-            if(c != 10) printf("Не верный ввод, попробуйте еще раз.\n");
+            if(c != 10) printf("Неверный ввод, попробуйте еще раз.\n");
             printf("\n");
             break;
         }
