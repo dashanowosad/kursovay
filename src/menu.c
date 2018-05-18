@@ -27,7 +27,7 @@ int main()
         case 'b': {
             system("clear");
             int A[17];
-            mass(A,1);
+            mass(A,0);
             move(A,0);
             system("clear");
             printf("a. Правила\n");
