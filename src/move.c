@@ -32,10 +32,8 @@ int move(int A[], int test)
             flag = 0;
         }
         w = win(A);
-        if (w == 15) {
-            printf("Поздравляем, вы победили");
+        if (w == 15) 
             break;
-        }
         if ((test == 1) || (test == 2)) break;
     }
     if (flag == 1) return 1;

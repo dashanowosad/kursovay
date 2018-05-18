@@ -128,7 +128,7 @@ CTEST(Win, Correct_Win)
     }	
     A[15] = 0;
     int result = win(A);
-    int expect = 15;
+    int expect = 1;
     ASSERT_EQUAL(expect, result);
 }
 
@@ -143,7 +143,7 @@ CTEST(Win, Incorrect_Win)
     A[13] = 15;
     A[14] = 14;
     int result = win(A);
-    int expect = 14;
+    int expect = 0;
     ASSERT_EQUAL(expect, result);
 }
 

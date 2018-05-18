@@ -15,5 +15,10 @@ int win(int A[])
     }
     if (A[15] == 0) 
         w++;
-return w;	
+    if (w == 15) {
+        printf("Поздравляем, вы победили");
+        return 1;
+    }
+    else
+        return 0;	
 }
