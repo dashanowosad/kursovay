@@ -86,7 +86,7 @@ CTEST(Move, Incorrect_Move)
 CTEST(Mass, Correct_Mass)
 {
     int A[17];
-    int result = mass(A);
+    int result = mass(A,0);
     print(A);
     int expect = 1;
     ASSERT_EQUAL(expect, result);	
