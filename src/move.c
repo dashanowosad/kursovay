@@ -20,7 +20,8 @@ int move(int A[], int test)
             A[k] = A[j];
             A[j] = m;
             system("clear");
-            print(A);
+            if (test == 0)
+                print(A);
             flag = 1;
         }
 
@@ -32,7 +33,7 @@ int move(int A[], int test)
             flag = 0;
         }
         w = win(A);
-        if (w == 15) 
+        if (w == 1) 
             break;
         if ((test == 1) || (test == 2)) break;
     }

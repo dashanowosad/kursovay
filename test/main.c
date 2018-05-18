@@ -51,7 +51,6 @@ CTEST(Move, Correct_Move)
     A[14] = 9;
     A[15] = 0;
     puts("\n");
-    print(A);
     int result = move(A,1);
     int expect = 1;
     ASSERT_EQUAL(expect, result);	
@@ -77,7 +76,6 @@ CTEST(Move, Incorrect_Move)
     A[14] = 9;
     A[15] = 0;
     puts("\n");
-    print(A);
     int result = move(A,2);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
@@ -92,7 +90,6 @@ CTEST(Mass, Correct_Mass)
     }	
     A[15] = 0;
     int result = mass(A,1);
-    print(A);
     int expect = 1;
     ASSERT_EQUAL(expect, result);	
 }
@@ -107,7 +104,6 @@ CTEST(Mass, Incorrect_Mass)
     A[13] = 18;
     A[15] = 0;
     int result = mass(A,1);
-    print(A);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
 }
