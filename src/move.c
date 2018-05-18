@@ -8,8 +8,10 @@ int move(int A[], int test)
     int n, k, i, m, j, w, flag = 0;
     while(1) {
         if (test == 0) scanf("%d", &n);
-        if (test == 1) n=4;
-        if (test == 2) n=5;
+        if (test == 1) n = 4;
+        if (test == 2) n = 5;
+        if (test == 3) n = 19;
+        if (test == 4) n = -4;
         for (i = 1; i <= 15; i++) {
             if (A[i] == 0 ) k = i;
             if (A[i] == n) j = i;
@@ -36,7 +38,8 @@ int move(int A[], int test)
         w = win(A,1);
         if (w == 1) 
             break;
-        if ((test == 1) || (test == 2)) break;
+        if (test != 0) 
+            break;
     }
     if (flag == 1) return 1;
     else return 0;
