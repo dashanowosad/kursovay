@@ -85,10 +85,30 @@ CTEST(Move, Incorrect_Move)
 
 CTEST(Mass, Correct_Mass)
 {
-    int A[17];
-    int result = mass(A,0);
+    int A[17], i, j = 0;
+    for (i = 1; i < 16; i++) {
+        A[j] = i;
+        j++;
+    }	
+    A[15] = 0;
+    int result = mass(A,1);
     print(A);
     int expect = 1;
+    ASSERT_EQUAL(expect, result);	
+}
+
+CTEST(Mass, Incorrect_Mass)
+{
+    int A[17], i, j = 0;
+    for (i = 1; i < 16; i++) {
+        A[j] = i;
+        j++;
+    }	
+    A[13] = 18;
+    A[15] = 0;
+    int result = mass(A,1);
+    print(A);
+    int expect = 0;
     ASSERT_EQUAL(expect, result);	
 }
 
