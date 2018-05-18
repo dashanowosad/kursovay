@@ -20,7 +20,8 @@ int move(int A[], int test)
             A[k] = A[j];
             A[j] = m;
             system("clear");
-            print(A);
+            if (test == 0)
+                print(A,1);
             flag = 1;
         }
 
@@ -28,14 +29,13 @@ int move(int A[], int test)
             break;
 
         else {
-            printf("Неверный ход"); 
+            if (test == 0)
+                printf("Неверный ход"); 
             flag = 0;
         }
-        w = win(A);
-        if (w == 15) {
-            printf("Поздравляем, вы победили");
+        w = win(A,1);
+        if (w == 1) 
             break;
-        }
         if ((test == 1) || (test == 2)) break;
     }
     if (flag == 1) return 1;
