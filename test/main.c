@@ -50,7 +50,6 @@ CTEST(Move, Correct_Move)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    puts("\n");
     int result = move(A,1);
     int expect = 1;
     ASSERT_EQUAL(expect, result);	
@@ -75,7 +74,6 @@ CTEST(Move, Incorrect_Move)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    puts("\n");
     int result = move(A,2);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
@@ -116,7 +114,7 @@ CTEST(Print, Correct_Print)
         j++;
     }	
     A[15] = 0;
-    int result = print(A);
+    int result = print(A,0);
     int expect = 1;
     ASSERT_EQUAL(expect, result);
 }
@@ -130,7 +128,7 @@ CTEST(Print, Incorrect_Print)
     }	
     A[15] = 0;
     A[12] = 12;
-    int result = print(A);
+    int result = print(A,0);
     int expect = 0;
     ASSERT_EQUAL(expect, result);
 }
@@ -143,7 +141,7 @@ CTEST(Win, Correct_Win)
         j++;
     }	
     A[15] = 0;
-    int result = win(A);
+    int result = win(A,0);
     int expect = 1;
     ASSERT_EQUAL(expect, result);
 }
@@ -158,7 +156,7 @@ CTEST(Win, Incorrect_Win)
     A[15] = 0;
     A[13] = 15;
     A[14] = 14;
-    int result = win(A);
+    int result = win(A,0);
     int expect = 0;
     ASSERT_EQUAL(expect, result);
 }

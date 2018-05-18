@@ -4,7 +4,7 @@
 #include "functions.h"
 #include <time.h>
 
-int win(int A[])
+int win(int A[], int test)
 { 
     int w, i;
     w = 0;
@@ -16,7 +16,9 @@ int win(int A[])
     if (A[15] == 0) 
         w++;
     if (w == 15) {
-        printf("Поздравляем, вы победили");
+        if (test != 0) {
+            printf("Поздравляем, вы победили");
+        }
         return 1;
     }
     else

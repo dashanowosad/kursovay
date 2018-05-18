@@ -35,7 +35,7 @@ int mass(int A[], int test)
                 }
             }
 
-            print(A);
+            print(A,1);
             nanosleep(&tw,&tr);
             control = prow(A);
             if (control == 1) {
