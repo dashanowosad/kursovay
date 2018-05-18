@@ -154,6 +154,19 @@ CTEST(Mass, Incorrect_Mass_right)
     ASSERT_EQUAL(expect, result);	
 }
 
+CTEST(Mass, Incorrect_Mass_left)
+{
+    int A[17], i, j = 0;
+    for (i = 1; i < 16; i++) {
+        A[j] = i;
+        j++;
+    }	
+    A[13] = -5;
+    A[15] = 0;
+    int result = mass(A,1);
+    int expect = 0;
+    ASSERT_EQUAL(expect, result);	
+}
 CTEST(Print, Correct_Print)
 { 
     int A[17], i, j = 0;
