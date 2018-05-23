@@ -50,7 +50,7 @@ CTEST(Move, Correct_Move)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    int result = move(A,1);
+    int result = move(A,4);
     int expect = 1;
     ASSERT_EQUAL(expect, result);	
 }
@@ -74,7 +74,7 @@ CTEST(Move, Incorrect_Move)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    int result = move(A,2);
+    int result = move(A,5);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
 }
@@ -98,7 +98,7 @@ CTEST(Move, Going_abroad_mass_right)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    int result = move(A,3);
+    int result = move(A,19);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
 }
@@ -122,7 +122,7 @@ CTEST(Move, Going_abroad_mass_left)
     A[13] = 10;
     A[14] = 9;
     A[15] = 0;
-    int result = move(A,4);
+    int result = move(A,-4);
     int expect = 0;
     ASSERT_EQUAL(expect, result);	
 }
