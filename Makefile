@@ -1,53 +1,60 @@
 CXX=gcc
 CFLAGS= $(CXX) -c -Wall -Werror
-OBJECTS = build/menu.o build/print.o build/mass.o build/prow.o build/move.o build/win.o
+OBJECTS = build/prog/menu.o build/prog/print.o build/prog/mass.o build/prog/prow.o build/prog/move.o build/prog/win.o
 
-OB = build/tag_test.o build/print.o build/mass.o build/prow.o build/move.o build/win.o
+OB = build/test/tag_test.o build/prog/print.o build/prog/mass.o build/prog/prow.o build/prog/move.o build/prog/win.o
 
 .PHONY: all clean
 
-all: bin build default test
+all: bin bin/prog bin/test build build/prog build/test default test
 
-default: bin/tag
+default: bin/prog/tag
 
-test: bin/tag_test
-	bin/tag_test
+test: bin/test/tag_test
+	bin/test/tag_test
 
-bin/tag: $(OBJECTS)
-	$(CXX) $(OBJECTS) -o bin/tag
+bin/prog/tag: $(OBJECTS)
+	$(CXX) $(OBJECTS) -o bin/prog/tag
 
-build/menu.o: src/menu.c src/functions.h
-	$(CFLAGS) src/menu.c -o build/menu.o
+build/prog/menu.o: src/menu.c src/functions.h
+	$(CFLAGS) src/menu.c -o build/prog/menu.o
 
-build/print.o: src/print.c src/functions.h
-	$(CFLAGS) src/print.c -o build/print.o
+build/prog/print.o: src/print.c src/functions.h
+	$(CFLAGS) src/print.c -o build/prog/print.o
 
-build/mass.o: src/mass.c src/functions.h
-	$(CFLAGS) src/mass.c -o build/mass.o
+build/prog/mass.o: src/mass.c src/functions.h
+	$(CFLAGS) src/mass.c -o build/prog/mass.o
 
-build/prow.o: src/prow.c src/functions.h
-	$(CFLAGS) src/prow.c -o build/prow.o
+build/prog/prow.o: src/prow.c src/functions.h
+	$(CFLAGS) src/prow.c -o build/prog/prow.o
 
-build/move.o: src/move.c src/functions.h
-	$(CFLAGS) src/move.c -o build/move.o
+build/prog/move.o: src/move.c src/functions.h
+	$(CFLAGS) src/move.c -o build/prog/move.o
 
-build/win.o: src/win.c src/functions.h
-	$(CFLAGS) src/win.c -o build/win.o
+build/prog/win.o: src/win.c src/functions.h
+	$(CFLAGS) src/win.c -o build/prog/win.o
 
 
 
-bin/tag_test: $(OB)
-	$(CXX) $(OB) -o bin/tag_test
+bin/test/tag_test: $(OB)
+	$(CXX) $(OB) -o bin/test/tag_test
 
-build/tag_test.o: test/main.c thirdparty/ctest.h src/functions.h
-	$(CFLAGS) -I thirdparty -I src -c test/main.c -o build/tag_test.o
-
+build/test/tag_test.o: test/main.c thirdparty/ctest.h src/functions.h
+	$(CFLAGS) -I thirdparty -I src -c test/main.c -o build/test/tag_test.o
 
 
 bin:
 	mkdir bin
+bin/prog:
+	mkdir bin/prog
+bin/test:
+	mkdir bin/test
 build:
 	mkdir build
+build/prog:
+	mkdir build/prog
+build/test:
+	mkdir build/test
 
 clean:
 	-rm -rf build bin
