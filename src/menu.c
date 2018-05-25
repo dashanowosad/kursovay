@@ -27,8 +27,8 @@ int main()
         case 'b': {
             system("clear");
             int A[17];
-            mass(A,0);
-            move(A,0);
+            mass(A, 0);
+            move(A, 0);
             system("clear");
             printf("a. Правила\n");
             printf("b. Начать игру\n");

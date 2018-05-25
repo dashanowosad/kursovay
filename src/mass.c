@@ -7,27 +7,27 @@
 int mass(int A[], int test)
 { 
     srand(time(NULL));
-    int i, control, number=0, t, j, k=0;
+    int i, control, number = 0, t, j, k = 0;
     struct timespec tw = {1,2};
     struct timespec tr;
 
     if (test == 0) {
         while(1) {
             number++;
-            for (i = 1;i <= 15;i++) {
+            for (i = 1; i <= 15; i++) {
                 A[i] = i;
             }
 
             A[0] = 0;
-            for(i = 0;i <= 15;i++) {
-                j = rand()%(i+1);		
+            for(i = 0; i <= 15; i++) {
+                j = rand() % (i+1);		
                 t = A[j];
                 A[j] = A[i];
                 A[i] = t;
             }
 
             system("clear");
-            for(i = 0;i <= 15;i++) {
+            for(i = 0; i <= 15; i++) {
                 if(A[i] == 0) {
                     t = A[15];
                     A[15] = A[i];
@@ -36,7 +36,7 @@ int mass(int A[], int test)
             }
 
             print(A,1);
-            nanosleep(&tw,&tr);
+            nanosleep(&tw, &tr);
             control = prow(A);
             if (control == 1) {
                 break;
@@ -48,7 +48,7 @@ int mass(int A[], int test)
         puts("\n");
     }
 
-    for(i = 0; i <=15; i++) {
+    for(i = 0; i <= 15; i++) {
     if ((A[i] <= 0) || (A[i] > 15)) 
         k++;
     }

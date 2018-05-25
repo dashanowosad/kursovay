@@ -17,13 +17,13 @@ int move(int A[], int test)
             if (A[i] == n) j = i;
         }
 
-        if (((k-j) == 1) || ((j-k) == 1) || ((k-j) == 4) || ((j-k) == 4)) {
+        if (((k - j) == 1) || ((j - k) == 1) || ((k - j) == 4) || ((j - k) == 4)) {
             m = A[k];
             A[k] = A[j];
             A[j] = m;
             system("clear");
             if (test == 0)
-                print(A,1);
+                print(A, 1);
             flag = 1;
         }
 
@@ -35,7 +35,7 @@ int move(int A[], int test)
                 printf("Неверный ход"); 
             flag = 0;
         }
-        w = win(A,1);
+        w = win(A, 1);
         if (w == 1) 
             break;
         if (test != 0) 

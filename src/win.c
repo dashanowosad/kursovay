@@ -8,7 +8,7 @@ int win(int A[], int test)
 { 
     int w, i;
     w = 0;
-    for (i = 0;i < 15;i++) {
+    for (i = 0; i < 15; i++) {
         if (A[i] < A[i+1]) {
             w++;
         }
